@@ -284,7 +284,6 @@ void Player::Update()
 			// ショットメモリの確保
 			Shot* pShot = new Shot();
 			pShot->SetMain(m_pMain);
-			//pShot->SetSecond(m_pSecond);
 			pShot->SetPlayer(this);
 			pShot->init();
 			pShot->Start(m_pos);
@@ -292,7 +291,6 @@ void Player::Update()
 
 			// 以降更新やメモリの開放はSceneMainに任せる
 			m_pMain->AddShot(pShot);
-			//m_pSecond->AddShot(pShot);
 
 			m_pSoundManager->SoudndAttack();	// 攻撃したときに音を鳴らす
 		}
